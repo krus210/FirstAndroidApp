@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/width_of_post"
+    android:layout_margin="@dimen/standard_margin"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="@dimen/size_icon"
+        android:layout_height="@dimen/size_icon"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPost"
+        app:layout_constraintStart_toStartOf="@+id/textViewPost"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_android"/>
+
+    <TextView
+        android:id="@+id/textViewPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/text_of_post"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintVertical_bias="0.55"
+        android:textSize="@dimen/size_text_of_post"
+        android:textColor="@color/colorTextOfPost"
+        />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_date"
+        android:textColor="@color/colorTextOfDate"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewAvatar"
+        app:layout_constraintStart_toEndOf="@+id/imageViewAvatar"
+        app:layout_constraintTop_toTopOf="@+id/imageViewAvatar"
+        app:layout_constraintVertical_bias="0.1"
+        android:layout_marginStart="@dimen/margin_between_text_and_icon"
+        tools:text="@string/date" />
+
+    <TextView
+        android:id="@+id/textViewAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/textViewDate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDate"
+        tools:text="@string/netology"
+        android:layout_marginTop="@dimen/margin_between_text_and_icon"
+        android:textColor="@color/colorTextOfAuthor"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/textViewShareCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/two"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintVertical_bias="0.9"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_share_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewShareCount"
+        app:layout_constraintEnd_toStartOf="@+id/textViewShareCount"
+        app:layout_constraintTop_toTopOf="@+id/textViewShareCount"
+        android:layout_marginEnd="@dimen/margin_between_text_and_icon"/>
+
+    <TextView
+        android:id="@+id/textViewCommentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonShare"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonShare"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonShare"
+        tools:text="@string/eight"
+        android:layout_marginEnd="@dimen/margin_25dp"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_comment_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCommentCount"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCommentCount"
+        app:layout_constraintTop_toTopOf="@+id/textViewCommentCount"
+        android:layout_marginEnd="@dimen/margin_between_text_and_icon"/>
+
+    <TextView
+        android:id="@+id/textViewLikeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonComment"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonComment"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonComment"
+        tools:text="@string/fifty"
+        android:layout_marginEnd="@dimen/margin_25dp"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_like_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLikeCount"
+        app:layout_constraintEnd_toStartOf="@+id/textViewLikeCount"
+        app:layout_constraintTop_toTopOf="@+id/textViewLikeCount"
+        android:layout_marginEnd="@dimen/margin_between_text_and_icon"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
