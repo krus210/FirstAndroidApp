@@ -1,8 +1,10 @@
 package com.example.firstandroidapp
 
-class Post(
+open class Post(
     var textOfPost: String,
     var dateOfPost: String,
+    val nameAuthor: String,
+    val photoAuthor: Int,
     var sharesCount: Int = 0,
     var commentsCount: Int = 0,
     var likesCount: Int = 0,
